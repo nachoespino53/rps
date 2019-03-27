@@ -1,0 +1,18 @@
+<h1>Rock, Paper, Scissors App</h1>
+
+
+<p>To play rock, paper, scissors, please select one of the following and press play</p>
+
+<%= form_tag "/rps_api" do %>
+  <%= radio_button_tag "select", "Rock" %>Rock<br>
+  <%= radio_button_tag "select", "Paper" %>Paper<br>
+  <%= radio_button_tag "select", "Scissors" %>Scissors<br>
+  <%= submit_tag "Play!" %>
+<% end %>
+
+
+<% if @result %>
+    <h3>You <%= @result[0] %>, the api chose <%= @result[1] %></h3>
+<% else %>
+    <h3>There was an error communicating with the api server, please try again</h3>
+<% end %>

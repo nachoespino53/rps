@@ -1,0 +1,814 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-27 14:14:03.484717"], ["updated_at", "2019-03-27 14:14:03.484717"]]
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-03-27 11:26:56 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateRpsApis (20190327142112)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190327142112_create_rps_apis.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "rps_apis" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190327142112_create_rps_apis.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190327142112"]]
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-03-27 11:27:19 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 537ms (Views: 532.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 11:27:24 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 11:27:57 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 11:37:11 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 163ms (Views: 157.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 11:38:12 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 11:38:51 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?select=rock" for ::1 at 2019-03-27 11:38:52 -0400
+Processing by StaticController#landing as HTML
+  Parameters: {"select"=>"rock"}
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?select=rock" for ::1 at 2019-03-27 11:39:00 -0400
+Processing by StaticController#landing as HTML
+  Parameters: {"select"=>"rock"}
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?select=rock" for ::1 at 2019-03-27 11:39:01 -0400
+Processing by StaticController#landing as HTML
+  Parameters: {"select"=>"rock"}
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?select=rock" for ::1 at 2019-03-27 11:39:02 -0400
+Processing by StaticController#landing as HTML
+  Parameters: {"select"=>"rock"}
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?select=rock" for ::1 at 2019-03-27 11:41:20 -0400
+Processing by StaticController#landing as HTML
+  Parameters: {"select"=>"rock"}
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rps_api?select=rock" for ::1 at 2019-03-27 11:41:22 -0400
+Processing by RpsApiController#index as HTML
+  Parameters: {"select"=>"rock"}
+Completed 500 Internal Server Error in 36818ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/rps_api_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2019-03-27 11:42:23 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 351ms (Views: 341.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rps_api?select=rock" for ::1 at 2019-03-27 11:42:25 -0400
+Processing by RpsApiController#index as HTML
+  Parameters: {"select"=>"rock"}
+Completed 406 Not Acceptable in 120ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (RpsApiController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-03-27 11:43:19 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 372ms (Views: 359.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rps_api?select=rock" for ::1 at 2019-03-27 11:43:21 -0400
+Processing by RpsApiController#index as HTML
+  Parameters: {"select"=>"rock"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template rps_api/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nacho-espino/Development/code/Code Challenges/rps/app/views"
+):
+  
+app/controllers/rps_api_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2019-03-27 11:47:12 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 161ms (Views: 155.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 11:47:13 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"select"=>"rock"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-03-27 12:33:06 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:33:10 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lic5d216Z+XAB065sKbQG/j2zxexGQltILu+9LcBFeaEDCqGRxQq2i4EbEsuWvpG2n0/YvIgCmlaBTr+pM3xqg==", "select"=>"Scissors", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `root' for #<RpsApiController:0x00007f7fef8705c0>):
+  
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:33:36 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:33:41 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PP83AD9k7F0U6582mklsZqKOe0EAbgNE4m5SrAVn+hku1CTxFQqhYvrovcQEtUY7gAWLNENXAECY0NamFqseVQ==", "select"=>"Scissors", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `root' for #<RpsApiController:0x00007f7fed178a80>):
+  
+app/controllers/rps_api_controller.rb:7:in `create'
+Started POST "/rps_api" for ::1 at 2019-03-27 12:36:01 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PP83AD9k7F0U6582mklsZqKOe0EAbgNE4m5SrAVn+hku1CTxFQqhYvrovcQEtUY7gAWLNENXAECY0NamFqseVQ==", "select"=>"Scissors", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 12:36:47 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:36:49 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lKs70fYtxw5+6+IOV6DVrPsDkDqJTNk1dpATtJLMAPSGgCgg3EOKMZDowPzJXP/x2YhgT8p12jEMLpe+gQDkuA==", "select"=>"Rock", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 202038ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:42:42 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 180ms (Views: 174.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:42:45 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5nPSjtouBuSMbfDjJTM8feVOROVqu/YZNIxNAcuX37f0WMF/8EBL22Ju0hG7zxYgx8W0kCmC9R1OMskL2Fs7+w==", "select"=>"Rock", "commit"=>"Play!"}
+No template found for RpsApiController#create, rendering head :no_content
+Completed 204 No Content in 46520ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 12:44:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 165ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:44:05 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qMTb700zUDkD8t1UoplZDoqL4h61RYOqy6q9X01oFm+678geZ10dBu3x/6Y8ZXNTqAASa/Z8gK6xFDlVXqTyIw==", "select"=>"Scissors", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 124981ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:46:43 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 165ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:46:46 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ajCKWj6erfl1TaFft39ozw8/BQ2Am0kZpN44Ej1CwpZ4G5mrFPDgxptOg60pg0KSLbT1eMOiSh3eYLwYLo4m2g==", "select"=>"Rock", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 113789ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:48:46 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 328ms (Views: 316.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:48:48 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LI27x1Cda7BOUkYDSgaEXrLvvjLkYxHfBud062YaYyc+pqg2evMmj6BRZPHU+q4DkGROR6daEtt8WfDhddaHaw==", "select"=>"Rock", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 14344ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `get'
+app/controllers/rps_api_controller.rb:18:in `get_throw'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:49:12 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 175ms (Views: 169.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:49:13 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nq4N2yMp7DVQsrVjzvZcDwB7ntmyjUVvQF7RYNFu6dMkhR4qCUehCr6xl5FQCnZSIvBurPG0Rms64FVqwqINnw==", "commit"=>"Play!"}
+Completed 500 Internal Server Error in 50539ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 12:57:21 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 336ms (Views: 323.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:57:24 -0400
+  
+SyntaxError (/Users/nacho-espino/Development/code/Code Challenges/rps/app/controllers/rps_api_controller.rb:7: syntax error, unexpected '(', expecting keyword_end
+        render :index (@result)
+                      ^
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/controllers/rps_api_controller.rb:34: syntax error, unexpected keyword_else, expecting keyword_end
+        else
+        ^~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/controllers/rps_api_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/rps_api_controller.rb:7: syntax error, unexpected '(', expecting keyword_end
+app/controllers/rps_api_controller.rb:34: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/rps_api_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2019-03-27 12:58:07 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 424ms (Views: 405.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:58:10 -0400
+  
+SyntaxError (/Users/nacho-espino/Development/code/Code Challenges/rps/app/controllers/rps_api_controller.rb:34: syntax error, unexpected keyword_else, expecting keyword_end
+        else
+        ^~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/controllers/rps_api_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/rps_api_controller.rb:34: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/rps_api_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2019-03-27 12:58:41 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 398ms (Views: 382.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:58:45 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gFsTVNuuZQMVyHMz1mEwnrqX8v2uKctIiWoCsviclc2ScACl8cAoPPvLUcFInRrDmBwCiO0QyEzz1Ia461BxgQ==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 896ms (Views: 359.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 12:59:39 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 393ms (Views: 379.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 12:59:41 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VarprqzgNJcu8UpLyYbW4YPxw56ZKUzV/4UIFmFOtXLfbhXkN3N7bK459ux2jEGpIQ3ezldpjctQJAqSknemQ==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 707ms (Views: 375.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 13:03:24 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 406ms (Views: 393.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:03:26 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KpK3p/CQSaUA73/XYN3JXs9W86pj5oeKqDw1zEDid7qgVkvtawMGXoAnw3Df114Wbaru+q2mRpQHnTdIs9tkg==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 423ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:14: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...ut_buffer.append=( if @result );@output_buffer.safe_append='
+...                              ^
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:16: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                           ^~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:18: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );
+...                            ^~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/rps_api/index.html.erb:14: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/rps_api/index.html.erb:16: syntax error, unexpected keyword_else
+app/views/rps_api/index.html.erb:18: syntax error, unexpected keyword_end
+app/views/rps_api/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/rps_api/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 13:05:05 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 398ms (Views: 384.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:05:07 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CrKj89orvcGID8iTUCRUB+/C1uVl86KQV7G2100791AYmbAC8EXw/mYM6mHO2H5azUkmkCbKoZQtDzLdXvcTHA==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:14: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+....append=( if @result != false );@output_buffer.safe_append='
+...                              ^
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:16: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                           ^~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:18: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );
+...                            ^~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/nacho-espino/Development/code/Code Challenges/rps/app/views/rps_api/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/rps_api/index.html.erb:14: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/rps_api/index.html.erb:16: syntax error, unexpected keyword_else
+app/views/rps_api/index.html.erb:18: syntax error, unexpected keyword_end
+app/views/rps_api/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/rps_api/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/rps_api_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-03-27 13:06:35 -0400
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 392ms (Views: 379.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:06:38 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ydUoxH1VEViaQYk0TM1BF8th1iW0tf5q19SnO9Mp9wjb/js1VztcZ3RCq8bSMWtK6eomUPeM/W6taiMxwOUTRA==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 740ms (Views: 369.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-27 13:19:07 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nacho-espino/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#landing as HTML
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 174ms (Views: 169.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:19:09 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X9D6ZxFTEo1+1eL/c9z2PeepOafD5pphWxGshVPVjJxN++mWOz1fspDWwA3tINxgxSLJ0oDfmWUhryiPQBlo0A==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 350ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:19:14 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tg5khv5XjYLvaqXmMDRLF8yTplToXVRjCH9yxbpw6MukJXd31DnAvQFphxSuyGFK7hhWIatkV2dywfbPqbwMhw==", "select"=>"Paper", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3142ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:19:39 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8FeYXtxyML2EXTA+l3yu6iiEfhvJWppIjPGmyXM0GW7ifIuv9hx9gmpeEswJgIS3Cg+ObopjmUz2TyLDYPj9Ig==", "select"=>"Paper", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 250ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:19:43 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQfPLbNYtOZ4X/kpJk5IpAQidNoAhKISxhSOpuf0BFvfLNzcmTb52ZZc29u4smL5JqmEr0O9oRa8qgqs9DjgFw==", "select"=>"Scissors", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 144ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:19:46 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eE/iVp7G0ivSb3IQFHPcSL+FqsiZ7a4FaGCQHQMohftqZPGntKifFDxsUOKKj/YVnQ5avdrUrQES3hQXEORhtw==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 186ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:20:09 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RytqQpLvlMgmMFr+HoZ3E9LEbQmh/1dielhnTNWI609VAHmzuIHZ98gzeAyAel1O8E+dfOLGVGYA5uNGxkQPAw==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3260ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:20:16 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRW2wYq20irHXkMbkYVBkaXjHX/6sSJtAt63Q0Q0Q4C/PqUwoNifFSldYekPeWvMh2jtCrmIIWl4YDNJV/inzA==", "select"=>"Paper", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 238ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:20:19 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXZA/LTS0QmR9yWBGpgTPdKdzUn4p1EBHBtqYF9cDDFrXVMNnrycNn/0B3OEZDlg8BY9PLueUgVmpe5qTJDofQ==", "select"=>"Scissors", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 172ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:10 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aQBbwOBaNag7yrx8DHfo8LKNauF+m60d9HnjSMRKH2V7K0gxyjR4l9XJno6Si8KtkAaalD2irhmOx2dC14b7KQ==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 366ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:13 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DHlI1/uozhJCmlVrUtI1uOFXrWsCtOyCjZLflApN83GGvbSdYDuB6cJS6czt2KLwQ6uwO8z0LZwiM90Q+XTgQ==", "select"=>"Paper", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 148ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:15 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CT3bX+v6Jw89GNRxQM2OfAMIhL23JCrSN65F8Ob+wcobFsiuwZRqMNMb9oPeMaQhIYN0yPQdKdZNEMH69TIlhg==", "select"=>"Scissors", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 178ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:17 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSIxuHGpFb9MsytVXRBl61Gm5J5ZVvQ/JihJImn9YHwvCSJJW8dYgKKwCafD7E+2cy0U6xpv9ztcls0oejGEMA==", "select"=>"Rock", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3497ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:24 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XrgZqPVQyZ0WGE7Rz03cUKg+EqZSryBKXrD2XjmcaZNMkwpZ3z6EovgbbCNRsfYNirXi0xGWI04kDnJUKlCN3w==", "select"=>"Paper", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 260ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rps_api" for ::1 at 2019-03-27 13:21:25 -0400
+Processing by RpsApiController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C71Q8Rzh86McbKxNPgPuYiEledwUiZgKmgUKYz34XdwZlkMANo++nPJvjr+g/8Q/A66JqVewmw7gu45pLjS5kA==", "select"=>"Scissors", "commit"=>"Play!"}
+  Rendering rps_api/index.html.erb within layouts/application
+  Rendered rps_api/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 170ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
